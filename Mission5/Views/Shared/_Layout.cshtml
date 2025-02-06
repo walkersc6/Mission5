@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @* • A title on the tab of the web page *@
+    <title>Friendship Bracelets</title>
+    @* • A custom icon next to the title on the web page (#notcoveredinthevideos) *@
+    <link rel="icon" type="image/png" href="~/image/s-icon.png">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @* • A heading that introduces your site *@
+	<header>
+		<h1>Sarah's Friendship Bracelets</h1>     
+        @* • Navigation to the second page (#notcoveredinthevideos) *@
+        <a href="@Url.Action("index", "Home")">Home</a>
+		<a href="@Url.Action("calculator", "Home")">Price Calculator</a>
+    </header>
+ 
+   <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    @* • A footer on the page that has a copyright and info about who built the page *@
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - Sarah Walker - Go Cougs!
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+

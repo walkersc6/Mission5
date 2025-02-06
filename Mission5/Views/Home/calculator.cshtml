@@ -1,0 +1,23 @@
+﻿<center>
+	<p>Before you contact me to schedule a time to learn how to make bracelets, please do a price check:</p>
+</center>
+
+@* • A box for the user to enter the number of hours they need from you *@
+<label for ="hours">How many hours you'd like to learn from me! </label>
+<input type ="number" min="1" max="6" name="hours" id="hours" required/>
+<br />
+
+@* • An non-editable box that shows how much you charge per hour *@
+<label for="charge">Charge per hour:</label>
+<input type="text" name="charge" id="charge" value="10" readonly>
+<br />
+
+@* • A button that allows the user to calculate the total *@
+<input type="button" value = "Calculate" id="btnCalc" />
+<br />
+
+@* • An output box that shows the total *@
+<div>
+	<h4>Total Charge: $<span id = "totalPrice">0.00</span></h4> 
+</div>
+
